@@ -1,0 +1,245 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: 62.5%;
+
+   --bg-color: white;
+   --bg-color-DarkMode: hsla(240, 5%, 7%, 1);
+
+   --font-bory: 'Roboto', sans-serif;
+
+   --font-color: hsla(240, 6%, 21%, 1);
+   --font-color-DarkMode: white;
+
+   --bg-button-first: hsla(240, 9%, 89%, 1);
+   --bg-button-first-hover: rgb(197, 197, 197);
+   --bg-button-first-DarkMode: hsla(240, 6%, 17%, 1);
+   --bg-button-first-DarkMode-hover: rgb(37, 37, 41);
+
+   --bg-button-second: hsla(194, 97%, 31%, 1);
+   --bg-button-second-hover: rgb(0, 97, 127);
+   --bg-button-second-DarkMode: hsla(195, 74%, 15%, 1);
+   --bg-button-second-DarkMode-hover:rgb(6, 46, 60);
+
+}
+.hide {
+   display: none;
+   translate: 0;
+}
+
+body {
+   background: var(--bg-color);
+}
+
+footer button {
+   position: absolute;
+   top: 6.4rem;
+   right: 6.4rem;
+
+   background: transparent;
+   border: none;
+   cursor: pointer;
+
+   transition: transform .5s;
+}
+
+footer button:hover {
+   transform: scale(1.2);
+}
+
+.container {
+   height: 100vh;
+   
+   display: flex;
+   gap: 10rem;
+
+   align-items: center;
+   justify-content: center;
+   margin: 0 1rem 0 1rem;
+      
+}
+
+.buttonsClock {
+   margin-top: 4.8rem;
+   display: flex;
+   gap: 4rem;
+   align-self: center;
+}
+
+.buttonsClock button img{
+   width: 4.8rem;
+   height: 4.8rem;
+}
+
+.buttonsClock button {
+   background: transparent;
+   border: none;
+   transition: transform all .5s;
+   cursor: pointer;
+}
+
+.buttonsClock button:hover {
+   transform: scale(1.1);
+}
+
+.timer span {
+   font-family: var(--font-bory);
+   color: var(--font-color);
+
+   font-size: clamp(4rem, 9rem + 4vh, 12.6rem);
+   line-height: 10.7rem;
+}
+
+.sound {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 3.2rem;
+}
+
+.sound button {
+   padding: 4.8rem;
+   background: var(--bg-button-first);
+   border: none;
+   border-radius: 2.4rem;
+
+   transition: all .5s;
+   cursor: pointer;
+}
+
+.sound button:hover {
+   transform: scale(1.1);
+   background: var(--bg-button-first-hover);
+}
+
+.sound button.Deactive {
+   background-color: var(--bg-button-second);
+}
+
+.sound button.Deactive:hover {
+   transform: scale(1.1);
+   background-color: var(--bg-button-second-hover);
+}
+
+.sound .button-range   {
+   position: relative;
+}
+
+.sound .button-range input {
+   position: absolute;
+   left: 2.9rem;
+   bottom: 2.4rem;
+   z-index: 1;
+   
+   height: 0.4rem;
+   width: 9rem;
+   
+   appearance: none;
+   background: var(--font-color);
+   border-radius: 0.5rem;
+}
+
+.sound .button-range input::-webkit-slider-thumb {
+   width: 1.6rem;
+   height: 1.6rem;
+   border-radius: 50%;
+   
+   appearance: none;
+   background: var(--font-color);
+}
+
+
+
+body.DarkMode {
+   background: var(--bg-color-DarkMode);
+}
+
+.timer.DarkMode span{
+   color: var(--font-color-DarkMode);
+}
+
+.sound button.DarkMode {
+   padding: 4.8rem;
+   background: var(--bg-button-first-DarkMode);
+   border: none;
+   border-radius: 2.4rem;
+
+   transition: all .5s;
+   cursor: pointer;
+}
+
+.sound button.DarkMode:hover {
+   transform: scale(1.1);
+   background: var(--bg-button-first-DarkMode-hover);
+}
+
+.sound button.Deactive.DarkMode {
+   background-color: var(--bg-button-second-DarkMode);
+}
+
+.sound button.Deactive.DarkMode:hover {
+   background-color: var(--bg-button-second-DarkMode-hover);
+}
+
+.sound .button-range input.DarkMode {
+   background: var(--bg-color);
+}
+
+.sound .button-range input.DarkMode::-webkit-slider-thumb {
+   background: var(--bg-color);
+}
+
+
+@media (max-width: 850px) {
+
+   footer button {
+      top: 1.5rem;
+      right: 5rem;
+   }
+   
+   .body {
+      display: grid;
+      height: 100vh;
+   }
+   
+   .container {
+      flex-direction: column;
+      gap: 5rem;
+   }
+   
+   .timer span {
+      font-size: clamp(4rem, 10rem + 7vh, 15.6rem);
+   }
+
+   .buttonsClock button img{
+      width: 6rem;
+      height: 6rem;
+   }
+}
+
+
+@media (max-width: 600px) {
+
+   footer button {
+      top: 1.5rem;
+      right: 2rem;
+   }
+   
+   .timer span {
+      font-size: clamp(5rem, 9.5rem + 5vh, 12.6rem);
+   }
+
+   .buttonsClock button img{
+      width: 4.8rem;
+      height: 4.8rem;
+   }
+}
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Focus Timer</title>
+
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="style.css">
+   <script src="./JS/index.js" type="module" defer></script>
+</head>
+
+<body class="body">
+
+   <div class="container">
+
+      <footer>
+
+         <button class="sun">
+            <img src="./assents/sun.svg"  alt="botão para deixar no modo white">
+         </button>
+
+         <button class="moon hide">
+            <img src="./assents/moon.svg"  alt="botão para deixar no modo dark">
+         </button>
+
+      </footer>
+
+      <div class="clock">
+
+         <div class="timer">  
+
+            <span class="minutes">00</span>
+            <span>:</span>
+            <span class="seconds">00</span>
+
+         </div>
+
+         <div class="buttonsClock">
+
+            <button class="buttonPlay">
+               <img class="imgPlay" src="./assents/play-black.png" alt="Botão para iniciar o cronometro">
+               <img class="imgPlayDarkMode hide" src="./assents/play-white.png" alt="Botão para iniciar o cronometro">
+            </button>
+
+            <button class="buttonPause hide">
+               <img class="imgPause" src="./assents/pause-black.png" alt="Botão de pausa do cronometro">
+               <img class="imgPauseDarkMode hide" src="./assents/pause-white.png" alt="Botão de pausa do cronometro">
+            </button>
+
+            <button class="buttonStop hide">
+               <img class="imgStop" src="./assents/stop-black.png" alt="Botão para parar o cronometro">
+               <img class="imgStopDarkMode hide" src="./assents/stop-white.png" alt="Botão para parar o cronometro">
+            </button>
+
+            <button class="buttonSet">
+               <img class="imgSet" src="./assents/set-black.png" alt="Botão para setar o tempo do cronometro">
+               <img class="imgSetDarkMode hide" src="./assents/set-white.png" alt="Botão para setar o tempo do cronometro">
+            </button>
+
+            <button class="buttonUP">
+               <img class="imgUp" src="./assents/up-black.png" alt="Botão para aumentar o cronometro em 5 minutos">
+               <img class="imgUpDarkMode hide" src="./assents/up-white.png" alt="Botão para aumentar o cronometro em 5 minutos">
+            </button>
+
+            <button class="buttonDown">
+               <img class="imgDown" src="./assents/down-black.png" alt="Botão para diminuir o cronometro em 5 minutos">
+               <img class="imgDownDarkMode hide" src="./assents/down-white.png" alt="Botão para diminuir o cronometro em 5 minutos">
+            </button>
+
+         </div>
+
+      </div>
+
+      <div class="sound">
+
+         <div class="button-range">
+
+            <button class="buttonFlorestPlay Active ">
+               <img class="imgFlorest" src="./assents/controls-sound/florest-black.png" alt="Botão para ativar o som de floresta"> 
+               <img class="imgFlorestDarkMode hide" src="./assents/controls-sound/florest-white.png" alt="Botão para ativar o som de floresta">
+            </button>
+            <button class="buttonFlorestPause Deactive hide">
+               <img src="./assents/controls-sound/florest-white.png" alt="Botão para desativar o som de floresta">
+            </button>
+
+            <input class="inp-florest" type="range" value="0" min="0" max="100" steps="1">
+         </div>
+
+         <div class="button-range">
+
+            <button class="buttonRainPlay Active">
+               <img class="imgRain" src="./assents/controls-sound/rain-black.png" alt="Botão para ativar o som de chuva">
+               <img class="imgRainDarkMode hide" src="./assents/controls-sound/rain-white.png" alt="Botão para ativar o som de chuva">
+            </button>
+            <button class="buttonRainPause Deactive hide">
+               <img src="./assents/controls-sound/rain-white.png" alt="Botão para desativar o som de chuva">
+            </button>
+
+            <input class="inp-rain" type="range" value="0" min="0" max="100">
+
+         </div>
+
+         <div class="button-range">
+
+            <button class="buttonCoffePlay Active">
+               <img class="imgCoffe" src="./assents/controls-sound/coffe-black.png" alt="Botão para ativar o som de cafeteria">
+               <img class="imgCoffeDarkMode hide" src="./assents/controls-sound/coffe-white.png" alt="Botão para ativar o som de cafeteria">
+            </button>
+            <button class="buttonCoffePause Deactive hide">
+               <img src="./assents/controls-sound/coffe-white.png" alt="Botão para desativar o som de cafeteria">
+            </button>
+            
+            <input class="inp-coffe" type="range" value="0" min="0" max="100">
+
+         </div>
+
+         <div class="button-range">
+
+            <button class="buttonFirePlay Active">
+               <img class="imgFire" src="./assents/controls-sound/fire-black.png" alt="Botão para ativar o som de fogo">
+               <img class="imgFireDarkMode hide" src="./assents/controls-sound/fire-white.png" alt="Botão para ativar o som de fogo">
+            </button>
+            <button class="buttonFirePause Deactive hide">
+               <img src="./assents/controls-sound/fire-white.png" alt="Botão para desativar o som de fogo">
+            </button>
+            
+            <input class="inp-fire" type="range" value="0" min="0" max="100">
+         </div>
+
+      </div>
+      
+   </div>
+
+</body>
+</html>
